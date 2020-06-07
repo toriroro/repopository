@@ -26,19 +26,12 @@ def main():
 
     # 要素を取得する
     # タイヤの値段を抽出する
-    # value:23c=5360642523 25c=5360642531
-    #tyre_price = soup.find('option',valubem-sku-selector__price pull-righte="5360642523")
-
-    # ↓23c無いとき？
     tyre_price_tag = soup.find_all('p', class_="bem-pricing__product-price js-unit-price")
 
-    print(tyre_price_tag[0].string)
     # 要素の文字列を取得する
-    tyre_width_23c = str(tyre_price_tag[0].string)
+    tyre_prices = str(tyre_price_tag[0].string)
 
-    # 23c
-    #print('wiggle ' + wiggle_width_23c[33:37])
-    print('wiggle : ' + tyre_width_23c)
+    print('wiggle : ' + tyre_prices)
 
     #1秒停止
     time.sleep(1)
